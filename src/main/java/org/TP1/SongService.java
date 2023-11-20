@@ -9,10 +9,12 @@ import java.util.List;
 public class SongService {
     private final SongRepository songRepository;
 
+    @Log
     public SongService(SongRepository songRepository) {
         this.songRepository = songRepository;
     }
 
+    @Log
     public void getSongs(){
         System.out.println("List of Songs: ");
         for(Song song : songRepository.getSongs()){
